@@ -33,16 +33,3 @@ Quran Explorer is a web-based application that allows users to search verses fro
 - `about.html` – Project overview and purpose
 
 ---
-
-## Developer Manual
-
-### Installation
-
-1. Clone or download the repository
-2. Run `npm install` in the root folder
-3. Create a `.env` file in the `server/` folder with your Supabase credentials:
-
-```env
-SUPABASE_URL=https://yourproject.supabase.co
-SUPABASE_KEY=your-anon-key
-```
