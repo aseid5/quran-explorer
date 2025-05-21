@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Quran</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Explore the Quran</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <input type="text" id="keywordInput" placeholder="Search by keyword">
+      <button id="searchBtn">Search</button>
+      <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #555;">
+        Try searching for words like <em>mercy</em>, <em>light</em>, <em>guidance</em>, or <em>justice</em>.
+      </p>
+    </section>
+
+    <section id="results"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quran Explorer</p>
+  </footer>
+
+  <script src="explore.js"></script>
+
+  <script>
+    if (annyang) {
+      const commands = {
+        'search for *keyword': function(keyword) {
+          document.getElementById("keywordInput").value = keyword;
+          document.getElementById("searchBtn").click();
+        }
+      };
+      annyang.addCommands(commands);
+      annyang.start();
+    }
+  </script>
+</body>
+</html>
+

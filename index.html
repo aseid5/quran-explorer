@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quran Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Quran Explorer</h1>
+    <nav>
+      <a href="explore.html">Explore</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section style="text-align: center; margin-top: 2rem;">
+      <h2>Discover the Wisdom of the Quran</h2>
+      <p>Search Quranic verses by keyword and explore ayahs related to themes like mercy, light, and justice.</p>
+      <a href="explore.html" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: #38ada9; color: white; border-radius: 5px; text-decoration: none;">
+        Start Exploring
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Quran Explorer</p>
+  </footer>
+  <canvas id="ayahChart" width="300" height="300"></canvas>
+
+<script>
+  const ctx = document.getElementById('ayahChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Mercy', 'Light', 'Justice', 'Guidance'],
+      datasets: [{
+        label: 'Example Keyword Mentions',
+        data: [12, 9, 7, 11],
+        backgroundColor: ['#38ada9', '#60a3bc', '#82ccdd', '#3c6382']
+      }]
+    }
+  });
+  </script>
+</body>
+</html>
+
